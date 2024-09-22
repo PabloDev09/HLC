@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <h1 style="display: flex; flex-wrap: nowrap; font-size: medium;">
+        5. Explica qué sucede cuando una variable global y local tienen el mismo nombre.
+    </h1>
+    <script>
+        // Vemos que en este caos aunque tenga una variable global con el valor Juan, en la funcion local
+        // el valor que se utiliza es el de la variable creada en el ámbito local
+        var nombre = 'Juan';
+        function holaMundo(){
+            var nombre;
+            nombre = 'Pepe';
+            alert('Hola, ' + nombre);
+        }
+        holaMundo();
+    </script>
+</body>
+</html>

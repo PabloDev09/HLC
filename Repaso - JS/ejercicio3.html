@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <h1 style="display: flex; flex-wrap: nowrap; font-size: medium;">
+        3. Declara una variable usando var y asígnale un valor. Otra de tipo let y otra const,
+        asignándole valor a cada una. Describe la diferencia en el hoisting entre var, let y
+        const.
+    </h1>
+    
+    <script>
+        // Las principales diferencias es que var y let, podemos definirlo en el momento que queramos
+        // en incluso llegando a poder redefinir su valor, en cambio const la vez que lo inicialices 
+        // debes definir un valor y no puedes cambiarlo 
+        // Por ultimo vemos que let limite el alcance de la variable, y var es una variable global sin importar el ambito
+        var nombre;
+        let nombre1;
+        const nombre2 = 'Pedro1';
+        alert(nombre + nombre1 + nombre2);
+        nombre = 'Pablo1';
+        nombre1 = 'Pepe1';
+    </script>
+</body>
+</html>
