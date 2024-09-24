@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 31</title>
+</head>
+<body>
+    <h1 style="display: flex; flex-wrap: nowrap; font-size: medium;">
+        31. Usa map() para elevar al cuadrado cada número en un array.
+    </h1>
+    <script>
+        var array = [2, 4, 5, 8, 10];
+        
+        var arrayNumAlCuadrado = array.map(function(num){
+                return Math.pow(num, 2);
+        });
+
+        alert(arrayNumAlCuadrado);
+    </script>
+</body>
+</html>

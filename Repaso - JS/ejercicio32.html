@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 32</title>
+</head>
+<body>
+    <h1 style="display: flex; flex-wrap: nowrap; font-size: medium;">
+        32. Usa reduce() para multiplicar todos los números en un array.
+    </h1>
+    <script>
+        var array = [2, 4, 5, 8, 10];
+        
+        var arrayTotal = array.reduce(function(total, num){
+                return total * num;
+        });
+
+        alert(arrayTotal);
+    </script>
+</body>
+</html>

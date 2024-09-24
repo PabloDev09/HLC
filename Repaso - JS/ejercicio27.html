@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 27</title>
+</head>
+<body>
+    <h1 style="display: flex; flex-wrap: nowrap; font-size: medium;">
+        27. Usa filter() para extraer objetos con un valor de propiedad específico de un array de
+        objetos.
+    </h1>
+    <script>
+
+        class Persona{
+            nombre; 
+            edad;
+            
+            constructor(nombre){
+                this.nombre = nombre;
+            }
+
+            getNombre(){
+                    return this.nombre;
+            }
+        }
+
+        const persona1 = new Persona('Pepoe');
+        const persona2 = new Persona('Jose');
+        const persona3 = new Persona('Garcia');
+        const persona4 = new Persona('Pablo');
+
+        var array = [persona1, persona2, persona3, persona4];
+        
+        var arrayDeValoresEspecificos = array.filter(persona => persona.getNombre() === 'Pablo');
+
+        // Mostrar el resultado
+        if (arrayDeValoresEspecificos.length > 0) {
+            alert(arrayDeValoresEspecificos[0].getNombre()); // Muestra el nombre de la persona filtrada
+        } else {
+            alert("No se encontró a Pablo.");
+        }
+    </script>
+</body>
+</html>

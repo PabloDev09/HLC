@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 34</title>
+</head>
+<body>
+    <h1 style="display: flex; flex-wrap: nowrap; font-size: medium;">
+        34. Escribe un programa que use map() y reduce() para calcular el precio total de artículos
+en un carrito de compras.
+    </h1>
+    <script>
+        class Producto{
+
+            nombre;
+            cantidad;
+            precio;
+
+            constructor(nombre, cantidad, precio){
+                this.nombre = nombre;
+                this.cantidad = cantidad;
+                this.precio = precio;
+            }
+
+
+        }
+
+        var producto1 = new Producto('Freidora', 3, 25);
+        var producto2 = new Producto('Estuche', 2, 5.90);
+        var producto3 = new Producto('Sudadera', 1, 10);
+        var producto4 = new Producto('Zapatillas', 1, 50);
+
+        var array = [producto1, producto2, producto3, producto4];
+        
+
+       var array1 = array.map(function(producto){
+           return producto.precio = producto.precio * producto.cantidad;
+    });
+
+        
+
+     var precioTotal = array1.reduce(function(total, producto){
+              return total + producto;
+    });
+
+    alert('El total de la compra es de: ' + precioTotal + ' €');
+    </script>
+</body>
+</html>

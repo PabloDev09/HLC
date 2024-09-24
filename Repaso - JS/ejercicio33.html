@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 33</title>
+</head>
+<body>
+    <h1 style="display: flex; flex-wrap: nowrap; font-size: medium;">
+        33. Explica el papel del valor inicial en reduce().
+    </h1>
+    <script>
+        // El valor inicial de la función reduce sirve para darle a entender a esta por el proceso que comenzará la acumulación
+        var array = [2, 4, 5, 8, 10];
+        
+        var arrayTotal = array.reduce(function(total, num){
+                return total * num;
+        }, 5);
+
+        alert(arrayTotal);
+    </script>
+</body>
+</html>

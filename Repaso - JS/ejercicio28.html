@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 28</title>
+</head>
+<body>
+    <h1 style="display: flex; flex-wrap: nowrap; font-size: medium;">
+        28. Explica el valor de retorno de filter() cuando ningún elemento cumple la condición.
+    </h1>
+    <script>
+        // Cuando ningun valor cumple con la condición el array no contiene ningun valor
+        var array = [5, 12, 8, 130, 34];
+        
+        var arrayMayoresDe10 = array.filter(function(num){
+            return num < 3
+        });
+
+        alert(arrayMayoresDe10);
+    </script>
+</body>
+</html>

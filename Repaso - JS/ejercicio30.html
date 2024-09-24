@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 30</title>
+</head>
+<body>
+    <h1 style="display: flex; flex-wrap: nowrap; font-size: medium;">
+        30. Convierte un array de strings a mayúsculas usando map().
+    </h1>
+    <script>
+        
+        var array = ['arbol', 'peep', 'juan', 'ural', 'tete'];
+        
+        var arrayConTodasMayusculas = array.map(function(palabra){
+                return palabra.toUpperCase();
+        });
+
+        alert(arrayConTodasMayusculas);
+    </script>
+</body>
+</html>

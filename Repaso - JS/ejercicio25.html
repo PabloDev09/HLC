@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 25</title>
+</head>
+<body>
+    <h1 style="display: flex; flex-wrap: nowrap; font-size: medium;">
+        25. Usa filter() para crear un nuevo array de números mayores que 10 a partir de [5, 12, 8, 130,
+44].
+    </h1>
+    <script>
+        var array = [5, 12, 8, 130, 34];
+        
+        var arrayMayoresDe10 = array.filter(function(num){
+            return num > 10
+        });
+
+        alert(arrayMayoresDe10);
+    </script>
+</body>
+</html>
