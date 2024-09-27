@@ -11,7 +11,60 @@
 misma y agrega un método a la clase, accediendo al mismo desde consola.
     </h1>
     <script>
-        
+    class Persona
+        {
+            nombre;
+            edad;
+            dinero;
+            dineroTotalPagos;
+
+            constructor(nombre, edad, dinero)
+            {
+                this.nombre = nombre;
+                this.edad = edad;
+                this.dinero = dinero;
+            }
+
+            setNombre(nombre)
+            {
+                this.nombre = nombre;
+            }
+
+            setEdad(edad)
+            {
+                this.edad = edad;
+            }
+
+            setDinero(dinero)
+            {
+                this.dinero = dinero;
+            }
+            
+            getNombre()
+            {
+                return this.nombre;
+            }
+
+            getEdad()
+            {
+                return this.edad;
+            }
+
+            getDineroTotalPagos()
+            {
+                return this.dineroTotalPagos;
+            }
+
+            realizarPago(pago)
+            {
+                var ingreso = this.dinero - pago;
+                this.dineroTotalPagos += ingreso
+            }
+
+            
+        }
+        var objetoPersona = new Persona('Pepe', 25, 1200);
+        alert(objetoPersona.getNombre());
     </script>
 </body>
 </html>

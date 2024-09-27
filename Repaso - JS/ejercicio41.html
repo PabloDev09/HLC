@@ -11,7 +11,44 @@
 para llamar al constructor del padre.
     </h1>
     <script>
-        
+        class Padre
+        {
+            colorOjos;
+            colorPelo;
+            colorPiel;
+
+            constructor(colorOjos, colorPelo, colorPiel)
+            {
+                this.colorOjos = colorOjos;
+                this.colorPelo = colorPelo;
+                this.colorPiel = colorPiel;
+            }
+
+            celebrarVictoria()
+            {
+                alert('Vamosss');
+            }
+        }
+
+        class Hijo extends Padre
+        {
+            constructor(colorOjos, colorPelo, colorPiel)
+            {
+                super(colorOjos, colorPelo, colorPiel);
+            }
+
+            @override 
+            celebrarVictoria()
+            {
+                console.log('Que biennn');
+            }
+        }
+
+        var padre = new Padre('marron', 'marron', 'blanco');
+        var hijo = new hijo('verdes', 'rubio', 'blanco');
+
+        padre.celebrarVictoria();
+        hijo.celebrarVictoria();
     </script>
 </body>
 </html>

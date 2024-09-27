@@ -10,7 +10,22 @@
         36. Define un objeto que represente a una persona con propiedades nombre y edad.
     </h1>
     <script>
-        
+        class Persona
+        {
+            nombre;
+            edad;
+
+            constructor(nombre, edad)
+            {
+                this.nombre = nombre;
+                this.edad = edad;
+            }
+        }
+
+        var nombre = 'Pedro';
+        var edad = 18;
+        var objetoPersona = new Persona(nombre, edad);
+        alert('Hola ' + objetoPersona.nombre + ', tienes ' + objetoPersona.edad + ' años');
     </script>
 </body>
 </html>

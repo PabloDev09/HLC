@@ -10,7 +10,59 @@
         39. Escribe un método de objeto que use this para acceder a otra propiedad.
     </h1>
     <script>
-        
+    class Persona
+        {
+            nombre;
+            edad;
+            dinero;
+            dineroTotalPagos;
+
+            constructor()
+            {
+    
+            }
+
+            setNombre(nombre)
+            {
+                this.nombre = nombre;
+            }
+
+            setEdad(edad)
+            {
+                this.edad = edad;
+            }
+
+            setDinero(dinero)
+            {
+                this.dinero = dinero;
+            }
+            
+            getNombre()
+            {
+                return this.nombre;
+            }
+
+            getEdad()
+            {
+                return this.edad;
+            }
+
+            getDineroTotalPagos()
+            {
+                return this.dineroTotalPagos;
+            }
+
+            realizarPago(pago)
+            {
+                var ingreso = this.dinero - pago;
+                this.dineroTotalPagos += ingreso
+            }
+        }
+
+        var objetoPersona = new Persona();
+        objetoPersona.setDinero(50);
+        objetoPersona.realizarPago(25);
+        alert('El total de pagos es de: ' + objetoPersona.getDineroTotalPagos() + ' €')
     </script>
 </body>
 </html>

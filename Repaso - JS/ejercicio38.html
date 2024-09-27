@@ -11,7 +11,43 @@
 cada caso una propiedad del objeto.
     </h1>
     <script>
-        
+    class Persona
+        {
+            nombre;
+            edad;
+
+            constructor()
+            {
+    
+            }
+
+            setNombre(nombre)
+            {
+                this.nombre = nombre;
+            }
+
+            setEdad(edad)
+            {
+                this.edad = edad;
+            }
+            
+            getNombre()
+            {
+                return this.nombre;
+            }
+
+            getEdad()
+            {
+                return this.edad;
+            }
+        }
+
+        var nombre = 'Pedro';
+        var edad = 18;
+        var objetoPersona = new Persona();
+        objetoPersona.setEdad(edad);
+        objetoPersona.setEdad(nombre);
+        alert('Hola ' + objetoPersona.getNombre() + ', tienes ' + objetoPersona.getEdad() + ' años');
     </script>
 </body>
 </html>

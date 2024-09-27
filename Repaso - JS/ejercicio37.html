@@ -10,7 +10,34 @@
         37. Crea un objeto vacío y agrega propiedades dinámicamente.
     </h1>
     <script>
-        
+        class Persona
+        {
+            nombre;
+            edad;
+
+            constructor()
+            {
+    
+            }
+
+            setNombre(nombre)
+            {
+                this.nombre = nombre;
+            }
+
+            setEdad(edad)
+            {
+                this.edad = edad;
+            }
+            
+        }
+
+        var nombre = 'Pedro';
+        var edad = 18;
+        var objetoPersona = new Persona();
+        objetoPersona.setEdad(edad);
+        objetoPersona.setEdad(nombre);
+        alert('Hola ' + objetoPersona.nombre + ', tienes ' + objetoPersona.edad + ' años');
     </script>
 </body>
 </html>
