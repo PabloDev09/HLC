@@ -7,10 +7,25 @@
 </head>
 <body>
     <h1 style="display: flex; flex-wrap: nowrap; font-size: medium;">
-        
+        44. Encadena múltiples llamadas .then() en una Promesa.
     </h1>
     <script>
-        
+        const promesa = new Promise((resolve, reject) => {
+            const msg = 'El dato ha sido comprobado';
+            const msg1 = 'El dato ha sido comprobado';
+            const msg2 = 'El dato ha sido comprobado';
+            resolve(msg);
+            resolve(msg1);
+            resolve(msg2);
+        });
+
+        promesa.then(msg => {
+            console.log(msg);
+        }).then(msg => {
+            console.log(msg);
+        }).then(msg => {
+            alert(msg);
+        });
     </script>
 </body>
 </html>

@@ -7,10 +7,18 @@
 </head>
 <body>
     <h1 style="display: flex; flex-wrap: nowrap; font-size: medium;">
-        
+        45. Explica qué sucede si ni resolve ni reject son llamados.
     </h1>
     <script>
-        
+        // Podemos comrpobar que si no llamamos a resolve o reject, la promesa nunca será resuelta o rechazada, 
+        // por lo que nunca tomará un valor, y la función then(), catch() y finally() serán inservibles
+        const promesa = new Promise((resolve, reject) => {
+            const msg = 'Mensaje de ejemplo';
+        });
+
+        promesa.then(msg => {
+            console.log(msg);
+        });
     </script>
 </body>
 </html>

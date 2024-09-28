@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 53</title>
+</head>
+<body>
+    <h1 style="display: flex; flex-wrap: nowrap; font-size: medium;">
+        53. Explica qué sucede si usas await fuera de una función async.
+    </h1>
+    <script>
+        // Como podemos ver si nos vamos a la consola para ver el resultado de la función async, 
+        // da error indicando que await no puede ser utilizado fuera de una función async
+        async function obtenerDatos()
+        {
+            return new Promise((resolve, reject) => {
+                resolve('Datos enviados');
+            });
+        }
+
+        const respuesta1 = await obtenerDatos();
+
+        console.log(respuesta1);
+    </script>
+</body>
+</html>

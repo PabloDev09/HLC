@@ -7,10 +7,19 @@
 </head>
 <body>
     <h1 style="display: flex; flex-wrap: nowrap; font-size: medium;">
-        
+        43. Crea una Promesa que se resuelva con un mensaje de saludo, usando .then() para
+manejar el valor resuelto de una Promesa.
     </h1>
     <script>
-        
+        const promesa = new Promise((resolve, reject) => {
+            const saludo = 'Bienvendo a la app';
+            resolve(saludo);
+        });
+
+            promesa.then(saludo => {
+                console.log(saludo); 
+            });
+
     </script>
 </body>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 47</title>
+</head>
+<body>
+    <h1 style="display: flex; flex-wrap: nowrap; font-size: medium;">
+        47. Crea un ejemplo con Promise.race para simular un tiempo de espera para una llamada
+a una API.
+    </h1>
+    <script>
+       function respuestaApi()
+       {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve('La API ha respondido');
+            }, 2000);
+        });
+       }
+
+       function tiempoDeEsperaMin()
+       {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                reject('Tiempo de espera superado');
+            }, 10000);
+        });
+       } 
+
+       Promise.race([respuestaApi(), tiempoDeEsperaMin()]).then(msg => {
+        console.log(msg);
+       }).catch(error => {
+        console.log(error);
+       });
+    </script>
+</body>
+</html>
